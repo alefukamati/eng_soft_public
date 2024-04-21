@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}" />
+
+    <title>Resultados</title>
+    <link rel="icon" href="imagens\logotittle.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/"
+        ><img id="logo-header" src="{{url_for('static', filename='logo.png')}}" alt="logo"
+      /></a>
+
+ 
+      <nav class="header-menu">
+        <p id="irInicio" class="header-item">Início</p>
+      </nav>
+    </header>
+
+    <div id="aviso">
+      <p>
+        <b>Observação:</b> Este teste não possui validação médica. <br />Para
+        resultados precisos procure atendimento especializado.
+      </p>
+    </div>
+
+    <main id="resultado">
+      <h3>Seu resultado:</h3>
+      {% if result == "1" %}
+      <h1 > POSSUI PREDISPOSIÇÃO</h1>
+      {% endif %}
+
+      {% if result == "0" %}
+      <h1 > NÃO POSSUI PREDISPOSIÇÃO</h1>
+      {% endif %}
+    </main>
+
+    <section id="botoes">
+      <div id="entenderResultado">➤ Entenda seu resultado</div>
+      <div id="enviarEmail">➤ Enviar para o E-mail</div>
+    </section>
+
+    <section id="explicacao">
+      <div id="explicacaoPositivo">
+        Após uma análise comparativa de suas respostas com o nosso banco de
+        dados, alcançamos um resultado que garante uma acurácia superior a 95%.
+        <br /><br />
+        Nosso método de modelagem de dados usa métodos estatísticos e
+        correlações causais relacionadas ao Acidente Vascular Cerebral (AVC)
+        baseadas em um artigo científico. Assim, nossa análise considerou
+        fatores críticos na identificação de pessoas com predisposição ao AVC,
+        incluindo idade, índice de glicose no sangue, hipertensão e doenças
+        cardiovasculares.
+        <br /><br />
+        Embora reconheçamos que essa notícia pode ser preocupante, ressaltamos
+        que este teste não substitui uma avaliação médica profissional.
+        Recomendamos fortemente a busca por atendimento médico especializado
+        para uma confirmação e orientação adequadas.
+      </div>
+      <div id="explicacaoNegativo">
+        Após uma análise comparativa de suas respostas com o nosso banco de
+        dados, alcançamos um resultado que garante uma acurácia superior a 95%.
+        <br /><br />
+        Nosso método de modelagem de dados usa métodos estatísticos e
+        correlações causais relacionadas ao Acidente Vascular Cerebral (AVC)
+        baseadas em um artigo científico. Assim, nossa análise considerou
+        fatores críticos na identificação de pessoas com predisposição ao AVC,
+        incluindo idade, índice de glicose no sangue, hipertensão e doenças
+        cardiovasculares.
+        <br /><br />
+        Sabemos que essa é uma boa notícia, mas reforçamos a ideia de que este
+        teste não substitui uma avaliação médica profissional, e que o risco de
+        AVC no futuro não pode ser descartado, especialmente se houverem
+        sintomas. Procure sempre orientação médica.
+      </div>
+    </section>
+    <script src="{{url_for('static', filename='redirecionamentos.js')}}"></script>
+    <script src="{{url_for('static', filename='resultados.js')}}"></script>
+  </body>
+</html>

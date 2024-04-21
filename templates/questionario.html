@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}" />
+    <title>Página Questionário</title>
+    <link rel="icon" href="imagens\logotittle.ico" type="image/x-icon" />
+  </head>
+
+  <body class="fundoQuestionário">
+    <header class="header">
+      <a href="/"
+        ><img id="logo-header" src="{{url_for('static', filename='logo.png')}}" alt="logo"
+      /></a>
+
+      <nav class="header-menu">
+        <p id="irInfoIniciativa" class="header-item">Sobre a iniciativa</p>
+        <p id="irInfoAVC" class="header-item">Saiba mais sobre o AVC</p>
+        <p id="irInicio" class="header-item">Início</p>
+      </nav>
+    </header>
+
+    <form action="{{ url_for('quest') }}" method="post" class="formsQuestionario">
+      <fieldset class="perguntas">
+        <legend>1. Qual o seu gênero?</legend>
+        <label for="radio-feminino"
+          ><input
+            type="radio"
+            name="genero"
+            id="radio-feminino"
+            value="2"
+            required
+          />Feminino</label
+        >
+        <label for="radio-masculino"
+          ><input
+            type="radio"
+            name="genero"
+            value="1"
+            id="radio-masculino"
+          />Masculino</label
+        >
+        <label for="radio-outro"
+          ><input
+            type="radio"
+            name="genero"
+            value="outro"
+            id="radio-outro"
+          />Outro</label
+        >
+      </fieldset>
+
+      <fieldset class="perguntas">
+        <legend>2. Qual a sua idade?</legend>
+        <label for="input-idade"
+          ><input
+            type="number"
+            id="input-idade"
+            name="input-idade"
+            required
+            step="1"
+            min="0"
+            max="999.99"
+        /></label>
+      </fieldset>
+
+      <fieldset class="perguntas">
+        <legend>3. Qual o seu Índice de Massa Corporal?</legend>
+        <label for="input-imc"
+          ><input
+            type="number"
+            id="input-imc"
+            name="input-imc"
+            required
+            step="0.01"
+            min="0"
+            max="999.99"
+        /></label>
+      </fieldset>
+
+      <fieldset class="perguntas">
+        <legend>4. Qual o seu índice de glicose no sangue?</legend>
+        <label for="glicose"
+          ><input
+            type="number"
+            id="glicose"
+            name="glicose"
+            required
+            step="0.01"
+            min="0"
+            max="999.99"
+        /></label>
+      </fieldset>
+
+      <fieldset class="perguntas">
+        <legend>5. Sobre sua relação com o tabagismo:</legend>
+        <label for="radio-fuma-regularmente"
+          ><input
+            type="radio"
+            name="status-fumante"
+            id="radio-fuma-regularmente"
+            value="3"
+            required
+          />Fuma regularmente</label
+        >
+        <label for="radio-fumou"
+          ><input
+            type="radio"
+            name="status-fumante"
+            value="1"
+            id="radio-fumou"
+          />Já fumou</label
+        >
+        <label for="radio-nunca-fumou"
+          ><input
+            type="radio"
+            name="status-fumante"
+            id="never smoked"
+            value="2"
+          />Nunca fumou</label
+        >
+      </fieldset>
+
+      <fieldset class="perguntas">
+        <legend>6. Possui hipertensão?</legend>
+        <label for="radio-hipertensao"
+          ><input
+            type="radio"
+            name="hipertensao"
+            id="radio-hipertensao"
+            value="1"
+            required
+          />Possuo</label
+        >
+        <label for="radio-naoHipertensao"
+          ><input
+            type="radio"
+            name="hipertensao"
+            value="0"
+            id="radio-naoHipertensao"
+          />Não possuo</label
+        >
+      </fieldset>
+
+      <fieldset class="perguntas">
+        <legend>7. Possui alguma doença cardiovascular?</legend>
+        <label for="radio-cardio"
+          ><input
+            type="radio"
+            name="cardiovascular"
+            id="radio-cardio"
+            value="1"
+            required
+          />Possuo</label
+        >
+        <label for="radio-naoCardio"
+          ><input
+            type="radio"
+            name="cardiovascular"
+            value="0"
+            id="radio-naoCardio"
+          />Não possuo</label
+        >
+      </fieldset>
+
+      <input type="submit" value="Enviar" id="enviarQuestionario" />
+    </form>
+    <div id="espaco"></div>
+    <script src="{{url_for('static', filename='redirecionamentos.js')}}"></script>
+  </body>
+</html>

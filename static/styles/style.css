@@ -1,0 +1,485 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: #e8eef3;
+  height: 100%;
+}
+
+/*HEADER*/
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  border-bottom: 2px solid #b3afd4;
+}
+
+#logo-header {
+  height: 110px;
+  width: 300px;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-right: 20px;
+}
+
+.header-item {
+  margin-left: 70px;
+  color: #7374b7;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.header-item:hover {
+  color: #b3afd4;
+}
+/*LOGIN*/
+
+.fundoLogin {
+  background: rgb(232, 238, 243);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 238, 243, 1) 75%,
+    rgba(118, 194, 178, 1) 100%
+  );
+}
+.cabecalho {
+  background-color: #76c2b2;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  height: 30px;
+  text-align: center;
+  font-size: x-large;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#colunas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 70px;
+  border: solid 3px rgb(158, 157, 157);
+  border-radius: 30px;
+  margin: 0 350px;
+  margin-top: 200px;
+  height: 300px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 240px;
+  height: 25px;
+  margin-bottom: 10px;
+  border: solid 2px #76c2b2;
+  border-radius: 10px;
+  font-size: medium;
+}
+
+.loginCadastro {
+  width: 120px;
+  height: 30px;
+  border: solid 2px #76c2b2;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+  text-align: center;
+  align-self: center;
+}
+#linha {
+  border: solid 2px rgb(158, 157, 157);
+  padding: 140px 0;
+}
+
+/*RESULTADOS*/
+#aviso {
+  margin: 80px auto;
+  font-size: large;
+  text-align: center;
+}
+#resultado {
+  height: 170px;
+  width: 550px;
+  border: 3px solid #76c2b2;
+  border-radius: 30px;
+  margin: 100px auto;
+  padding: 15px 45px;
+}
+#predisposicao {
+  text-align: center;
+  padding-top: 20px;
+}
+#botoes {
+  text-align: center;
+}
+#botoes div {
+  font-size: x-large;
+  display: inline;
+  padding: 0 100px;
+}
+#botoes div:hover {
+  text-decoration: underline;
+  text-decoration-color: #76c2b2;
+  cursor: pointer;
+}
+#explicacao {
+  background: rgb(232, 238, 243);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 238, 243, 1) 0%,
+    rgba(118, 194, 178, 1) 50%,
+    rgba(232, 238, 243, 1) 100%
+  );
+}
+#explicacaoPositivo {
+  display: none;
+  padding: 300px 300px;
+  text-align: center;
+  font-size: 18px;
+}
+#explicacaoNegativo {
+  display: none;
+  padding: 300px 300px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*QUESTIONÁRIO*/
+
+/*.fundoQuestionário {
+  background: rgb(232, 238, 243);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 238, 243, 1) 85%,
+    rgba(118, 194, 178, 1) 100%
+  );
+}*/
+input[type="number"],
+input[type="radio"] {
+  background-color: #ffffff;
+  height: 20px;
+  border: solid 2px rgb(158, 157, 157);
+}
+
+.formsQuestionario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.perguntas {
+  font-size: larger;
+  width: 650px;
+  border: #76c2b2 solid 3px;
+  border-radius: 30px;
+  margin: 10px 0px;
+}
+
+#enviarQuestionario {
+  width: 120px;
+  height: 30px;
+  margin-top: 15px;
+  border: solid 2px #76c2b2;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: large;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+  /*header*/
+  .header {
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  #logo-header {
+    height: 91px;
+    width: 250px;
+    margin-bottom: 15px;
+    margin: 0 50px;
+  }
+
+  .header-menu {
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .header-item {
+    margin: 4px 0;
+  }
+
+  /*questionário*/
+  .perguntas {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  .formsQuestionario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+  }
+  #enviarQuestionario {
+    width: 140px;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  /*LOGIN*/
+  .fundoLogin {
+    background: rgb(232, 238, 243);
+  }
+  #colunas {
+    flex-direction: column;
+    border: none;
+    margin: 130px 0;
+  }
+  #linha {
+    transform: rotate(90deg);
+    border: none;
+    display: none;
+    padding: 0;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 250px;
+  }
+  .form {
+    margin: 20px 0;
+  }
+
+  /*RESULTADO*/
+
+  #resultado {
+    max-width: 90%;
+    width: 80%;
+    border: 3px solid #76c2b2;
+    border-radius: 30px;
+    margin: 100px auto 90px;
+    padding: 15px 0;
+    text-align: center;
+  }
+  #botoes div {
+    display: flex;
+    margin: 20px auto;
+    max-width: 90%;
+    white-space: nowrap;
+    justify-content: center;
+  }
+
+  #explicacaoPositivo {
+    display: none;
+    padding: 300px 20px;
+  }
+  #explicacaoNegativo {
+    display: none;
+    padding: 300px 20px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 700px) {
+  body {
+    max-width: 700px;
+  }
+  /*header*/
+  .header {
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  #logo-header {
+    height: 91px;
+    width: 250px;
+    margin-bottom: 15px;
+    margin: 15px 100px;
+  }
+
+  .header-menu {
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .header-item {
+    margin: 4px 0;
+  }
+
+  /*LOGIN*/
+  .fundoLogin {
+    background: rgb(232, 238, 243);
+    background: linear-gradient(
+      180deg,
+      rgba(232, 238, 243, 1) 85%,
+      rgba(118, 194, 178, 1) 100%
+    );
+  }
+  #colunas {
+    flex-direction: column;
+    border: none;
+    margin: 130px 0;
+  }
+
+  #linha {
+    transform: rotate(90deg);
+    border: none;
+    display: none;
+    padding: 0;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 240px;
+    max-width: 250px;
+  }
+  .form {
+    margin: 20px 0;
+  }
+  /*questionário*/
+  .perguntas {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+  /*RESULTADO*/
+
+  #resultado {
+    max-width: 90%;
+    width: 80%;
+    border: 3px solid #76c2b2;
+    border-radius: 30px;
+    margin: 100px auto 90px;
+    padding: 15px 0;
+    text-align: center;
+  }
+  #botoes div {
+    display: flex;
+    margin: 20px auto;
+    max-width: 80%;
+    white-space: nowrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 874px) {
+  body {
+    max-width: 874px;
+  }
+  /*header*/
+  .header {
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  #logo-header {
+    height: 91px;
+    width: 250px;
+    margin-bottom: 15px;
+    margin: 0;
+  }
+
+  .header-menu {
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .header-item {
+    margin: 4px 0;
+  }
+
+  /*LOGIN*/
+  .fundoLogin {
+    background: rgb(232, 238, 243);
+    background: linear-gradient(
+      180deg,
+      rgba(232, 238, 243, 1) 75%,
+      rgba(118, 194, 178, 1) 100%
+    );
+  }
+  #colunas {
+    border: solid 3px rgb(158, 157, 157);
+    border-radius: 30px;
+    margin: 130px auto;
+    width: 700px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 240px;
+    max-width: 250px;
+  }
+  .form {
+    margin: 20px 0;
+  }
+  /*questionário*/
+  .perguntas {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+  /*RESULTADO*/
+
+  #resultado {
+    max-width: 90%;
+    width: 80%;
+    border: 3px solid #76c2b2;
+    border-radius: 30px;
+    margin: 100px auto 90px;
+    padding: 15px 0;
+    text-align: center;
+  }
+  #botoes div {
+    display: inline;
+    margin: 20px 20px;
+    white-space: nowrap;
+    justify-content: center;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 875px) {
+  .fundoLogin {
+    background: rgb(232, 238, 243);
+    background: linear-gradient(
+      180deg,
+      rgba(232, 238, 243, 1) 75%,
+      rgba(118, 194, 178, 1) 100%
+    );
+  }
+  #colunas {
+    border: solid 3px rgb(158, 157, 157);
+    border-radius: 30px;
+    margin: 50px auto;
+    width: 800px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 240px;
+    max-width: 250px;
+  }
+  .form {
+    margin: 20px 0;
+  }
+}

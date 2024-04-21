@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Índice</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style_homepage.css')}}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Katibeh&family=Noto+Sans+Tai+Viet&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Sumana&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="{{url_for('static', filename='logotittle.ico')}}"type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="/"
+        ><img id="logo-header" src="{{url_for('static', filename='logo.png')}}"alt="Logo Caretech"
+      /></a>
+      <nav class="header-menu">
+        <p id="irInfoIniciativa" class="header-item">Sobre a iniciativa</p>
+        <p id="irInfoAVC" class="header-item">Saiba mais sobre o AVC</p>
+        <p id="irLogin" class="header-item">Realizar teste</p>
+      </nav>
+    </header>
+    <main>
+      <!--        INÍCIO        -->
+      <div id="intro">
+        <div id="intro-texto">
+          <h2>Bem vindo(a) à nossa plataforma!</h2>
+          <p>Nós da Caretech ficamos feliz em poder te ajudar!</p>
+        </div>
+        <img
+          src="{{url_for('static', filename='img-inicio.png')}}"
+          alt="Cérebro humano"
+          width="380px"
+          height="280px"
+        />
+        <p></p>
+      </div>
+      <p id="linha"></p>
+
+      <!--        INICIATIVA        -->
+
+      <h1 id="iniciativa">Sobre a iniciativa:</h1>
+      <div class="texto">
+        <p>
+          Esse site é um projeto acadêmico desenvolvido por alunos de Ciência da
+          Computação e de Engenharia da Informação durante as aulas de
+          Engenharia de Software, ministradas pela professora Juliana Cristina
+          Braga, na Universidade Federal do ABC durante o 1º quadrimestre de
+          2024.
+        </p>
+
+        <div id="p-1">
+          <p>
+            Durante as aulas da disciplina a professora nos encorajou a
+            desenvolver um projeto, no qual poderíamos aplicar os conceitos
+            vistos em aula, de uma forma prática e sem limitações de tema. Dessa
+            forma, nossa equipe desenvolveu um algoritmo baseado em Machine
+            Learning capaz de identificar, a partir de um questionário, se a
+            pessoa possui ou não uma predisposição ao AVC (Acidente Vascular
+            Cerebral), a partir de perguntas simples e diretas.
+          </p>
+          <img
+            src="{{url_for('static', filename='logo_ufabc.png')}}"
+            alt="Logo da UFABC"
+            width="250px"
+            height="180px"
+          />
+        </div>
+        <p>
+          O diagnóstico precoce do AVC geralmente possui baixa taxa de acurácia,
+          porque é um processo muito demorado e possui um custo elevado,
+          principalmente com os exames; além do fato de não serem todos os
+          centros laboratoriais que são aptos a realizarem exames como a
+          Tomografia, que é o método mais utilizado para o diagnóstico. Por
+          isso, nosso projeto busca deixar esse processo mais acessível e
+          rápido, para que mais pessoas possam ser cuidadas antes de sofrerem
+          casos mais alarmantes.
+        </p>
+        <p>
+          É importante ressaltar que o nosso projeto <b>NÃO</b> deve ser
+          interpretado como um diagnóstico completo, mas sim como um
+          direcionamento para que os pacientes possam procurar um aconselhamento
+          médico como uma forma de prevenção, para assim obter um diagnóstico
+          final.
+        </p>
+      </div>
+      <p id="linha"></p>
+
+      <img class="img_central" src="{{url_for('static', filename='cientista.jpg')}}"alt="cientista" />
+
+      <p id="linha"></p>
+
+      <!--        O QUE É O AVC        -->
+
+      <h1 id="sobre">O que é o AVC?</h1>
+      <div class="texto">
+        <p>
+          O Acidente Vascular Cerebral ocorre a partir da obstrução (AVC
+          Isquêmico) ou rompimento (AVC Hemorrágico) dos vasos sanguíneos que
+          irrigam o cérebro, logo, esse acidente é responsável pela morte de
+          células nervosas, o que causa as inúmeras consequências de um episódio
+          de um AVC.
+        </p>
+
+        <p>
+          A atenção aos sintomas é primordial para o reconhecimento precoce o
+          avanço da doença. Dentre eles, pode-se destacar:
+        </p>
+
+        <div id="lista">
+          <li>
+            Dor de cabeça intensa e repentina (pode ser seguida de vômitos)
+          </li>
+          <li>
+            Fraqueza ou dormência, geralmente de um lado do corpo, no rosto ou
+            nas extremidades, como perna e braço
+          </li>
+          <li>Paralisia ou dificuldade de se movimentar</li>
+          <li>Dificuldade ou perda de fala, da visão ou da coordenação</li>
+          <li>Confusão mental</li>
+        </div>
+
+        <p>
+          Existem alguns fatores que podem ser classificados como facilitadores
+          do desenvolvimento de um AVC, como por exemplo: hipertensão, diabetes,
+          colesterol elevado, tabagismo, sedentarismo e histórico familiar.
+        </p>
+
+        <p>
+          A reabilitação de um paciente que sofreu um episódio de AVC ocorre
+          ainda no hospital, por meio do restabelecimento da coordenação motora
+          e mobilidade, a fim de auxiliar na recuperação da sua independência
+          física e emocional. A reaprendizagem pode ser um processo lento e
+          requer muita dedicação do próprio paciente, assim como do apoio de uma
+          vasta equipe de profissionais da área da saúde.
+        </p>
+
+        <a class="link-quest" href="/login"
+          >Faça o questionário para verificar se você tem predisposição ou não!
+          É um teste rápido e fácil de ser realizado!</a
+        >
+
+        <p>
+          Novamente, salientamos que o diagnóstico final do AVC só pode ser
+          realizado por um profissional da saúde qualificado, por meio de exames
+          específicos que comprovem tal condição.
+        </p>
+      </div>
+
+      <p id="linha"></p>
+
+      <p>
+        Observação: Todas as informações clínicas e médicas utilizadas durante o
+        desenvolvimento do projeto foram embasadas no Ministério Público da
+        Saúde e na sua Biblioteca Virtual em Saúde.
+      </p>
+    </main>
+    <script src="{{url_for('static', filename='homepage.js')}}"></script>
+  </body>
+</html>
