@@ -1,6 +1,7 @@
 from flask import Flask,render_template, request, redirect, url_for, flash, session
 from ml_model import predictStroke 
-from db import saveCadast, saveQuest, validateCredentials, searchResult
+#from db import saveCadast, saveQuest, validateCredentials
+from txt import saveCadast, saveResult, validateCredentials, searchResult
 
 #funcao predictStroke(lista) recebe o argumento lista com a lista dos valores coletados no questiionario
 #ela vai retornar o resultado da classificacao
